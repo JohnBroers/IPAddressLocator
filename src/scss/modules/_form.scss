@@ -1,0 +1,56 @@
+.form {
+    width: 100%;
+    max-width: 550px;
+    margin-bottom: 1.5rem;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 2rem;
+    }
+    &__field-wrapper {
+        display: flex;
+        height: 60px;
+        align-items: stretch;
+        justify-content: center;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+    
+    &__field-input {
+        min-width: 0;
+        margin: 0;
+        padding: 1rem 1.25rem;
+        appearance: none;
+        flex-grow: 1;
+        font-size: 1rem;
+        font-family: 'Rubik', sans-serif;
+        border: 2px solid transparent;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        color: $darkgray;
+        &--invalid {
+            border-color: $errorred;
+        }
+        &:focus {
+            outline: 0;
+        }
+    }
+    
+    &__field-submit {
+        margin: 0;
+        padding: 1.25rem 1.5rem;
+        background-color: $black;
+        appearance: none;
+        border: 0;
+        color: $white;
+        cursor: pointer;
+        flex-shrink: 0;
+        &:hover,
+        &:focus {
+            background-color: $darkgray;
+            outline: 0;
+        }
+    }
+}
+
+::placeholder {
+    color: $lightgray;
+}
